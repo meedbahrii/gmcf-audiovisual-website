@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GMCF - Création Audiovisuelle & Formation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        cursor: none;
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+      }
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes particleFloat {
+        0% {
+          transform: translateY(100vh) translateX(0);
+          opacity: 0;
+        }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% {
+          transform: translateY(-100px) translateX(100px);
+          opacity: 0;
+        }
+      }
+      @keyframes scrollPulse {
+        0%, 100% { opacity: 0; }
+        50% { opacity: 1; }
+      }
+      @keyframes floatElement {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        33% { transform: translateY(-20px) rotate(5deg); }
+        66% { transform: translateY(10px) rotate(-5deg); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-[#020303] text-[#F8F8F8] font-sans overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

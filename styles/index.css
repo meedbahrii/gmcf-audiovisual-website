@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  @apply bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text transition-colors duration-300;
+}
+
+/* Theme transition effects */
+.theme-transition {
+  @apply transition-all duration-300;
+}
+
+/* Custom cursor styles */
+body {
+  cursor: none;
+}
+
+/* Dark mode toggle animations */
+.theme-toggle-sun {
+  @apply transition-transform duration-500;
+}
+
+.theme-toggle-moon {
+  @apply transition-transform duration-500;
+}
+
+/* Background effects */
+.dark .bg-gradient {
+  @apply bg-gradient-to-b from-dark-background to-dark-background/95;
+}
+
+.light .bg-gradient {
+  @apply bg-gradient-to-b from-light-background to-light-background/95;
+}
+
+/* Text effects */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r;
+}
+
+.dark .gradient-text {
+  @apply from-white via-dark-text to-white;
+}
+
+.light .gradient-text {
+  @apply from-light-text via-light-accent to-light-text;
+}
